@@ -5,6 +5,6 @@ install_ioncube_ext() {
     install_ext "ioncube" "automatic" "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz"
     exts+=("ioncube")
 
-    ln -s $PHP_EXT_DIR/ioncube_loader_lin_${PHP_VERSION%.*}.so $PHP_EXT_DIR/ioncube.so
+    ln -s $BUILD_DIR/.heroku/php/ioncube/ioncube_loader_lin_${PHP_VERSION%.*}.so $PHP_EXT_DIR/ioncube.so
   fi
 }
